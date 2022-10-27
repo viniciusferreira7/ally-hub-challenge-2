@@ -3,7 +3,8 @@ import { InterestDestinationsFormContainer } from './styles'
 export function InterestDestinationsForm() {
   return (
     <InterestDestinationsFormContainer>
-      InterestDestinationsForm
+      <input type="text" placeholder="País" required />
+      <input type="text" placeholder="Cidade" required />{' '}
     </InterestDestinationsFormContainer>
   )
 }

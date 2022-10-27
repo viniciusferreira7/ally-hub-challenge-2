@@ -7,9 +7,12 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px ${(props) => props.theme['blue-500']};
+}
 
 body, input, button {
-  font-family: 'Open Sans', sans-serif;
-
+  font:400 1rem 'Open Sans', sans-serif;
 }
 `

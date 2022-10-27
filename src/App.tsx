@@ -1,15 +1,13 @@
 import { ThemeProvider } from 'styled-components'
 import { Form } from './pages/Form'
 import { GlobalStyles } from './styles/global'
-import { DefaultTheme } from './styles/theme'
+import { defaultTheme } from './styles/theme'
 
-function App() {
+export function App() {
   return (
-    <ThemeProvider theme={DefaultTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <Form />
       <GlobalStyles />
     </ThemeProvider>
   )
 }
-
-export default App
