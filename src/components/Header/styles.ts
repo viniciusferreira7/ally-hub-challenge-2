@@ -4,9 +4,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
 
-  max-width: 1120px;
   width: 100%;
-  margin: 2rem auto;
+  margin: 2rem auto 2rem;
 
   @media screen and (max-width: 767px) {
     img {

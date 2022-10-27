@@ -1,6 +1,21 @@
 import styled from 'styled-components'
 
-export const PersonalDataFormContainer = styled.form`
+export const FormContainer = styled.form`
+  display: grid;
+  grid-template-areas:
+    'PersonalDataForm InterestDestinationsForm'
+    'PersonalDataForm button';
+  gap: 0.2rem;
+  align-items: flex-start;
+
+  background: ${(props) => props.theme.white};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+export const BaseFormCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,10 +25,9 @@ export const PersonalDataFormContainer = styled.form`
 
   width: 100%;
   max-width: 30rem;
-  height: 25rem;
   margin: auto;
   padding: 1.5rem;
-  border-radius: 18px;
+  border-radius: 22px;
 
   background: ${(props) => props.theme['gray-300']};
 
@@ -25,7 +39,7 @@ export const PersonalDataFormContainer = styled.form`
 
   input {
     width: 90%;
-    padding: 0.7rem;
+    padding: 0.6rem;
     border-radius: 6px;
 
     border-color: ${(props) => props.theme['gray-900']};
