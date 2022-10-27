@@ -6,4 +6,10 @@ export const GlobalStyles = createGlobalStyle`
   padding:0;
   box-sizing: border-box;
 }
+
+
+body, input, button {
+  font-family: 'Open Sans', sans-serif;
+
+}
 `
