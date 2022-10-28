@@ -1,13 +1,13 @@
 import { InterestDestinationsForm } from './components/InterestDestinationsForm'
 import { PersonalDataForm } from './components/PersonalDataForm'
-import { FormContainer } from './styles'
+import { ButtonContainer, FormContainer } from './styles'
 
 export function Form() {
   return (
     <FormContainer>
       <PersonalDataForm />
       <InterestDestinationsForm />
-      <button type="submit">Enviar</button>
+      <ButtonContainer type="submit">Enviar</ButtonContainer>
     </FormContainer>
   )
 }
