@@ -8,14 +8,25 @@ export const FormContainer = styled.form`
   gap: 0.2rem;
   align-items: flex-start;
 
-  background: ${(props) => props.theme.white};
+  width: 100%;
+  max-width: 1120px;
+  margin: auto;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    grid-template-areas:
+      'PersonalDataForm'
+      'InterestDestinationsForm'
+      'button';
+    gap: 0.4rem;
   }
 `
 
 export const ButtonContainer = styled.button`
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+
   max-width: 20rem;
   width: 100%;
   height: 3rem;
@@ -28,6 +39,8 @@ export const ButtonContainer = styled.button`
   color: ${(props) => props.theme['blue-500']};
 
   font-size: 1.2rem;
+
+  cursor: pointer;
 
   &:hover {
     transition: all 0.3s ease-in-out;
@@ -54,16 +67,17 @@ export const BaseFormCardContainer = styled.div`
   margin: auto;
   padding: 1.5rem;
   border-radius: 22px;
-  border: 2px solid ${(props) => props.theme.white};
+  border: 2px solid ${(props) => props.theme['blue-500']};
 
-  background: ${(props) => props.theme['gray-300']};
+  background: ${(props) => props.theme.white};
 
   &:focus-within {
-    transition: border 0.3s ease-in-out;
+    transition: all 0.8s ease-in-out;
     border: 2px solid ${(props) => props.theme['blue-500']};
+    background: ${(props) => props.theme['blue-500']};
 
     h2 {
-      color: ${(props) => props.theme['blue-500']};
+      color: ${(props) => props.theme.white};
     }
   }
 
@@ -72,7 +86,7 @@ export const BaseFormCardContainer = styled.div`
     align-items: center;
     gap: 0.5rem;
 
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme['blue-500']};
 
     text-transform: capitalize;
   }
@@ -82,7 +96,8 @@ export const BaseFormCardContainer = styled.div`
     padding: 0.6rem;
     border-radius: 6px;
 
-    border-color: ${(props) => props.theme['gray-900']};
+    border: 2px solid ${(props) => props.theme['blue-500']};
+    background: ${(props) => props.theme.white};
 
     &:focus::placeholder {
       color: ${(props) => props.theme['blue-500']};

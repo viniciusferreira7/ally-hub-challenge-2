@@ -6,7 +6,7 @@ export function InterestDestinationsForm() {
     <InterestDestinationsFormContainer>
       <h2>
         Destino de interesse
-        <AirplaneTakeoff size={32} weight="fill" />
+        <AirplaneTakeoff size={35} weight="fill" />
       </h2>
       <input type="text" placeholder="País" required />
       <input type="text" placeholder="Cidade" required />

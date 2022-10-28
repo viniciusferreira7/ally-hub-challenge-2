@@ -9,10 +9,14 @@ export const GlobalStyles = createGlobalStyle`
 
 :focus {
   outline: 0;
-  box-shadow: 0 0 0 2px ${(props) => props.theme['blue-500']};
+  box-shadow: 0 0 0 4px ${(props) => props.theme.white};
 }
 
 body, input, button {
   font:400 1rem 'Open Sans', sans-serif;
+}
+
+body {
+  background: ${(props) => props.theme.white};
 }
 `

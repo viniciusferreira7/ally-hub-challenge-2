@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  max-width: 1120px;
   width: 100%;
+  height: 100vh;
   margin: auto;
+
+  background: ${(props) => props.theme.white};
 `
