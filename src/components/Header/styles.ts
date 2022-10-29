@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
 
   width: 100%;
-  max-width: 1120px;
+  max-width: 70rem;
   margin: 1.2rem auto 2rem;
 
   @media screen and (max-width: 767px) {

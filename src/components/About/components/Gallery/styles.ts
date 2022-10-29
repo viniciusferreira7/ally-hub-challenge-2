@@ -8,11 +8,15 @@ export const GalleryContainer = styled.section`
   gap: 0.8rem;
 
   width: 100%;
-  max-width: 1120px;
+  max-width: 70rem;
+  max-height: 48.81rem;
   margin: auto;
   padding: 1rem;
   border: 2px solid ${(props) => props.theme['blue-500']};
   border-radius: 12px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     margin: auto;

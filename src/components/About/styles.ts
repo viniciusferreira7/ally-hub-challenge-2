@@ -8,6 +8,6 @@ export const AboutContainer = styled.main`
   flex-direction: column;
 
   width: 100%;
-  max-width: 1120px;
+  max-width: 70rem;
   margin: auto;
 `

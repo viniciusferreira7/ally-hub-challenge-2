@@ -15,55 +15,53 @@ import Landscape12 from '../../../../assets/landscape-12.avif'
 import Landscape13 from '../../../../assets/landscape-13.avif'
 import Landscape14 from '../../../../assets/landscape-14.avif'
 import Landscape15 from '../../../../assets/landscape-15.avif'
+import Landscape16 from '../../../../assets/landscape-16.avif'
+import Landscape17 from '../../../../assets/landscape-17.avif'
+import Landscape18 from '../../../../assets/landscape-18.avif'
+import Landscape19 from '../../../../assets/landscape-19.avif'
+import Landscape20 from '../../../../assets/landscape-20.avif'
+import Landscape21 from '../../../../assets/landscape-21.avif'
+import Landscape22 from '../../../../assets/landscape-22.avif'
+import Landscape23 from '../../../../assets/landscape-23.avif'
+import Landscape24 from '../../../../assets/landscape-24.avif'
+import Landscape25 from '../../../../assets/landscape-25.avif'
 
 export function Galley() {
+  const galleyImages = [
+    Landscape1,
+    Landscape2,
+    Landscape3,
+    Landscape4,
+    Landscape5,
+    Landscape6,
+    Landscape7,
+    Landscape8,
+    Landscape9,
+    Landscape10,
+    Landscape11,
+    Landscape12,
+    Landscape13,
+    Landscape14,
+    Landscape15,
+    Landscape16,
+    Landscape17,
+    Landscape18,
+    Landscape19,
+    Landscape20,
+    Landscape21,
+    Landscape22,
+    Landscape23,
+    Landscape24,
+    Landscape25,
+  ]
+
   return (
     <GalleryContainer>
-      <div>
-        <img src={Landscape1} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape2} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape3} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape4} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape5} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape6} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape7} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape8} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape9} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape10} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape11} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape12} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape13} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape14} alt="Imagem de paisagem" />
-      </div>
-      <div>
-        <img src={Landscape15} alt="Imagem de paisagem" />
-      </div>
+      {galleyImages.map((landscape) => (
+        <div key={landscape}>
+          <img src={landscape} alt="Imagem de paisagem" />
+        </div>
+      ))}
     </GalleryContainer>
   )
 }
