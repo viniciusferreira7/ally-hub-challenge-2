@@ -7,8 +7,7 @@ export const HeaderContainer = styled.header`
 
   width: 100%;
   max-width: 1120px;
-  margin: auto;
-  padding: 0 0 2rem 0;
+  margin: 1.2rem auto 2rem;
 
   @media screen and (max-width: 767px) {
     img {
