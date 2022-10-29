@@ -1,7 +1,7 @@
-import { PaperPlaneTilt, X } from 'phosphor-react'
+import { PaperPlaneTilt } from 'phosphor-react'
 import { InterestDestinationsForm } from './components/InterestDestinationsForm'
 import { PersonalDataForm } from './components/PersonalDataForm'
-import { ButtonContainer, CloseButton, FormContainer, Overlay } from './styles'
+import { ButtonContainer, FormContainer, Overlay } from './styles'
 
 import * as Dialog from '@radix-ui/react-dialog'
 
@@ -12,9 +12,6 @@ export function Form() {
       <Dialog.Content>
         <Dialog.Title>Formulário de cadastro</Dialog.Title>
         <FormContainer>
-          <CloseButton>
-            <X size={22} />
-          </CloseButton>
           <PersonalDataForm />
           <InterestDestinationsForm />
           <ButtonContainer type="submit">

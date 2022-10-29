@@ -1,9 +1,13 @@
-import { AirplaneTakeoff } from 'phosphor-react'
+import { AirplaneTakeoff, X } from 'phosphor-react'
+import { CloseButton } from '../../styles'
 import { InterestDestinationsFormContainer } from './styles'
 
 export function InterestDestinationsForm() {
   return (
     <InterestDestinationsFormContainer>
+      <CloseButton>
+        <X size={25} />
+      </CloseButton>
       <h2>
         Destino de interesse
         <AirplaneTakeoff size={35} weight="fill" />

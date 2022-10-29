@@ -1,9 +1,13 @@
-import { IdentificationBadge } from 'phosphor-react'
+import { IdentificationBadge, X } from 'phosphor-react'
+import { CloseButton } from '../../styles'
 import { PersonalDataFormContainer } from './styles'
 
 export function PersonalDataForm() {
   return (
     <PersonalDataFormContainer>
+      <CloseButton>
+        <X size={25} />
+      </CloseButton>
       <h2>
         Dados pessoais
         <IdentificationBadge size={35} weight="fill" />

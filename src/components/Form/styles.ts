@@ -15,8 +15,8 @@ export const Overlay = styled(Dialog.Overlay)`
 export const FormContainer = styled.form`
   display: grid;
   grid-template-areas:
-    'PersonalDataForm  InterestDestinationsForm'
-    'PersonalDataForm SendButton CloseButton';
+    'PersonalDataForm  InterestDestinationsForm '
+    'PersonalDataForm SendButton ';
   gap: 0.2rem;
   align-items: flex-start;
 
@@ -74,19 +74,32 @@ export const ButtonContainer = styled.button`
 `
 
 export const CloseButton = styled(Dialog.Close)`
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+
   background: transparent;
   border: 0;
+  outline: 0;
   line-height: 0;
   cursor: pointer;
 
-  grid-area: CloseButton;
+  border-radius: 8px;
 
-  background: transparent;
-  border: 1px solid ${(props) => props.theme['blue-500']};
   color: ${(props) => props.theme['blue-500']};
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background: ${(props) => props.theme['blue-500']};
+    color: ${(props) => props.theme.white};
+  }
 `
 
 export const BaseFormCardContainer = styled.div`
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +123,15 @@ export const BaseFormCardContainer = styled.div`
 
     h2 {
       color: ${(props) => props.theme.white};
+    }
+
+    button {
+      color: ${(props) => props.theme.white};
+
+      &:hover {
+        background: ${(props) => props.theme.white};
+        color: ${(props) => props.theme['blue-500']};
+      }
     }
   }
 
