@@ -10,10 +10,4 @@ export const AboutContainer = styled.main`
   width: 100%;
   max-width: 1120px;
   margin: auto;
-
-  h1 {
-    color: ${(props) => props.theme['gray-900']};
-
-    font-size: 1.8rem;
-  }
 `

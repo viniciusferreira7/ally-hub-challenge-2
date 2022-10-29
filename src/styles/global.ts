@@ -12,6 +12,22 @@ export const GlobalStyles = createGlobalStyle`
   box-shadow: 0 0 0 4px ${(props) => props.theme.white};
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: ${(props) => props.theme['blue-500']};
+  border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-track{
+  background-color: ${(props) => props.theme.white};
+  border-radius: 5px;
+
+}
+
 body, input, button {
   font:400 1rem 'Open Sans', sans-serif;
 }

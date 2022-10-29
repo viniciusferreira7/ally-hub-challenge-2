@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const GalleryContainer = styled.main`
+export const GalleryContainer = styled.section`
   display: grid;
   justify-content: center;
   align-items: center;
@@ -26,16 +26,17 @@ export const GalleryContainer = styled.main`
     height: 15rem;
 
     overflow: hidden;
+    box-shadow: none;
 
     transition: all 0.3s ease-in-out;
 
     &:hover {
       transform: scale(1.4);
-
+      box-shadow: 8px 8px 10px 4px ${(props) => props.theme['gray-900']};
       border-radius: 20px;
 
       img {
-        transform: scale(1.3);
+        transform: scale(1.5);
       }
     }
 
