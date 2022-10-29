@@ -1,22 +1,38 @@
 import styled from 'styled-components'
 
+import * as Dialog from '@radix-ui/react-dialog'
+
+export const Overlay = styled(Dialog.Overlay)`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+
+  background: ${(props) => props.theme['blue-500']};
+  opacity: 0.5;
+`
+
 export const FormContainer = styled.form`
   display: grid;
   grid-template-areas:
-    'PersonalDataForm InterestDestinationsForm'
-    'PersonalDataForm button';
+    'PersonalDataForm  InterestDestinationsForm'
+    'PersonalDataForm SendButton CloseButton';
   gap: 0.2rem;
   align-items: flex-start;
 
   width: 100%;
   max-width: 1120px;
   margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media screen and (max-width: 768px) {
     grid-template-areas:
       'PersonalDataForm'
       'InterestDestinationsForm'
-      'button';
+      'SendButton';
     gap: 0.4rem;
   }
 `
@@ -27,6 +43,8 @@ export const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
 
+  grid-area: SendButton;
+
   max-width: 20rem;
   width: 100%;
   height: 3rem;
@@ -34,7 +52,7 @@ export const ButtonContainer = styled.button`
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
-  border: 3px solid ${(props) => props.theme['blue-500']};
+  border: 2px solid ${(props) => props.theme['blue-500']};
   background: ${(props) => props.theme.white};
   color: ${(props) => props.theme['blue-500']};
 
@@ -45,6 +63,7 @@ export const ButtonContainer = styled.button`
   &:hover {
     transition: all 0.3s ease-in-out;
     background: ${(props) => props.theme['blue-500']};
+    border-color: ${(props) => props.theme.white};
     color: ${(props) => props.theme.white};
   }
 
@@ -52,6 +71,19 @@ export const ButtonContainer = styled.button`
     border-top-left-radius: 22px;
     border-bottom-right-radius: 22px;
   }
+`
+
+export const CloseButton = styled(Dialog.Close)`
+  background: transparent;
+  border: 0;
+  line-height: 0;
+  cursor: pointer;
+
+  grid-area: CloseButton;
+
+  background: transparent;
+  border: 1px solid ${(props) => props.theme['blue-500']};
+  color: ${(props) => props.theme['blue-500']};
 `
 
 export const BaseFormCardContainer = styled.div`
@@ -73,7 +105,7 @@ export const BaseFormCardContainer = styled.div`
 
   &:focus-within {
     transition: all 0.8s ease-in-out;
-    border: 2px solid ${(props) => props.theme['blue-500']};
+    border: 2px solid ${(props) => props.theme.white};
     background: ${(props) => props.theme['blue-500']};
 
     h2 {

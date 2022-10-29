@@ -10,6 +10,9 @@ export const GalleryContainer = styled.main`
   width: 100%;
   max-width: 1120px;
   margin: auto;
+  padding: 1rem;
+  border: 2px solid ${(props) => props.theme['blue-500']};
+  border-radius: 12px;
 
   @media screen and (max-width: 768px) {
     margin: auto;
@@ -22,14 +25,12 @@ export const GalleryContainer = styled.main`
     width: 100%;
     height: 15rem;
 
-    background: navy;
-
     overflow: hidden;
 
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.4);
 
       border-radius: 20px;
 
