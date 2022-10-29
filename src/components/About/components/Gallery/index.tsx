@@ -20,49 +20,49 @@ export function Galley() {
   return (
     <GalleryContainer>
       <div>
-        <img src={Landscape1} alt="" />
+        <img src={Landscape1} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape2} alt="" />
+        <img src={Landscape2} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape3} alt="" />
+        <img src={Landscape3} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape4} alt="" />
+        <img src={Landscape4} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape5} alt="" />
+        <img src={Landscape5} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape6} alt="" />
+        <img src={Landscape6} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape7} alt="" />
+        <img src={Landscape7} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape8} alt="" />
+        <img src={Landscape8} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape9} alt="" />
+        <img src={Landscape9} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape10} alt="" />
+        <img src={Landscape10} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape11} alt="" />
+        <img src={Landscape11} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape12} alt="" />
+        <img src={Landscape12} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape13} alt="" />
+        <img src={Landscape13} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape14} alt="" />
+        <img src={Landscape14} alt="Imagem de paisagem" />
       </div>
       <div>
-        <img src={Landscape15} alt="" />
+        <img src={Landscape15} alt="Imagem de paisagem" />
       </div>
     </GalleryContainer>
   )
