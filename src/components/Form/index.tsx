@@ -10,7 +10,6 @@ export function Form() {
     <Dialog.Portal>
       <Overlay />
       <Dialog.Content>
-        <Dialog.Title>Formulário de cadastro</Dialog.Title>
         <FormContainer>
           <PersonalDataForm />
           <InterestDestinationsForm />

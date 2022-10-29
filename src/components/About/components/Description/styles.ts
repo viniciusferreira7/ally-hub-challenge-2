@@ -14,6 +14,8 @@ export const DescriptionContainer = styled.section`
   box-shadow: 12px 12px 10px 4px ${(props) => props.theme['gray-300']};
   border: 2px solid transparent;
 
+  translate: all 0.5s ease-in-out;
+
   &:hover {
     border: 2px solid ${(props) => props.theme['blue-500']};
     border-radius: 6px;

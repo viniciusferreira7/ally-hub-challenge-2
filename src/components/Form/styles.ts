@@ -109,6 +109,7 @@ export const BaseFormCardContainer = styled.div`
     gap: 0.5rem;
 
     color: ${(props) => props.theme['blue-500']};
+    font-size: 1.5rem;
 
     text-transform: capitalize;
   }
