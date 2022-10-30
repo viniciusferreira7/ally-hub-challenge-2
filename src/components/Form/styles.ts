@@ -93,6 +93,10 @@ export const BaseFormCardContainer = styled.div`
       color: ${(props) => props.theme.white};
     }
 
+    label {
+      color: ${(props) => props.theme.white};
+    }
+
     button {
       color: ${(props) => props.theme.white};
 
@@ -112,18 +116,5 @@ export const BaseFormCardContainer = styled.div`
     font-size: 1.5rem;
 
     text-transform: capitalize;
-  }
-
-  input {
-    width: 90%;
-    padding: 0.6rem;
-    border-radius: 6px;
-
-    border: 2px solid ${(props) => props.theme['blue-500']};
-    background: ${(props) => props.theme.white};
-
-    &:focus::placeholder {
-      color: ${(props) => props.theme['blue-500']};
-    }
   }
 `

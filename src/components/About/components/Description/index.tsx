@@ -7,7 +7,9 @@ export function Description() {
       <h1>Marque sua viagem</h1>
       <p>Nos conte países e cidades que você gostaria de viajar</p>
       <Dialog.Trigger asChild>
-        <ButtonContainer type="button">Cadastrar</ButtonContainer>
+        <ButtonContainer type="button" title="Cadastrar">
+          Cadastrar
+        </ButtonContainer>
       </Dialog.Trigger>
     </DescriptionContainer>
   )

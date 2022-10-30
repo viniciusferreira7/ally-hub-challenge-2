@@ -2,6 +2,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { AirplaneTakeoff, X } from 'phosphor-react'
 
 import { CloseButton } from '../../styles'
+import { Field } from '../Field'
 import { InterestDestinationsFormContainer } from './styles'
 
 export function InterestDestinationsForm() {
@@ -11,13 +12,16 @@ export function InterestDestinationsForm() {
         <X size={25} />
       </CloseButton>
       <Dialog.Title>
-        <h2>
-          Destino de interesse
-          <AirplaneTakeoff size={35} weight="fill" />
-        </h2>
+        Destino de interesse
+        <AirplaneTakeoff size={35} weight="fill" />
       </Dialog.Title>
-      <input type="text" placeholder="País" required />
-      <input type="text" placeholder="Cidade" required />
+      <Field
+        name="country"
+        type="text"
+        placeholder="País"
+        labelContent="País"
+      />
+      <Field name="city" type="text" placeholder="City" labelContent="City" />
     </InterestDestinationsFormContainer>
   )
 }
