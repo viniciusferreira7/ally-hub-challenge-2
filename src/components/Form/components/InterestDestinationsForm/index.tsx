@@ -1,11 +1,19 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { AirplaneTakeoff, X } from 'phosphor-react'
+import { useFetch } from '../../../../hooks/useFetch'
 
 import { CloseButton } from '../../styles'
 import { Field } from '../Field'
 import { InterestDestinationsFormContainer } from './styles'
 
 export function InterestDestinationsForm() {
+  const { country, city } = useFetch(
+    'https://amazon-api.sellead.com/country',
+    'https://amazon-api.sellead.com/city',
+  )
+
+  console.log(country)
+
   return (
     <InterestDestinationsFormContainer>
       <CloseButton>
