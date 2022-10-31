@@ -9,7 +9,6 @@ export function useFetch(urlCountry: string, urlCity: string) {
     const data = await response.json()
 
     setCountry(data)
-    console.log(data)
   }
 
   async function loadFetchCity() {
