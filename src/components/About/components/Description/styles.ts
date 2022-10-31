@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { BaseButton } from '../../../../pages/Home/styles'
 
 export const DescriptionContainer = styled.section`
   display: flex;
@@ -33,4 +32,3 @@ export const DescriptionContainer = styled.section`
     margin: 1rem 0;
   }
 `
-export const ButtonContainer = styled(BaseButton)``

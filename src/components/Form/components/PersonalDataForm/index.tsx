@@ -1,69 +1,40 @@
-import * as Dialog from '@radix-ui/react-dialog'
-import { IdentificationBadge, X } from 'phosphor-react'
-
-import { CloseButton } from '../../styles'
+import { IdentificationBadge } from 'phosphor-react'
 import { Field } from '../Field'
+import { FieldMask } from '../FieldMask'
 import { PersonalDataFormContainer } from './styles'
 
 export function PersonalDataForm() {
   return (
     <PersonalDataFormContainer>
-      <CloseButton>
-        <X size={25} />
-      </CloseButton>
-      <Dialog.Title>
+      <h2>
         Dados pessoais
         <IdentificationBadge size={35} weight="fill" />
-      </Dialog.Title>
-      <Field name="name" type="text" placeholder="Nome" labelContent="Nome" />
+      </h2>
       <Field
+        name="name"
+        type="text"
+        labelContent="Nome"
+        placeholder="John Doe"
+      />
+      <FieldMask
+        mask="cpf"
         name="cpf"
         type="text"
-        placeholder="000-000-000-00"
         labelContent="CPF"
-        // mask={[
-        //   /[0-9]/,
-        //   /\d/,
-        //   /\d/,
-        //   '.',
-        //   /[0-9]/,
-        //   /\d/,
-        //   /\d/,
-        //   '.',
-        //   /[0-9]/,
-        //   /\d/,
-        //   /\d/,
-        //   '-',
-        //   /[0-9]/,
-        //   /\d/,
-        // ]}
+        placeholder="000.000.000-00"
       />
       <Field
+        name="email"
+        type="text"
+        labelContent="Email"
+        placeholder="johndoe@gmail.com"
+      />
+      <FieldMask
+        mask="telephone"
         name="telephone"
         type="text"
-        placeholder="+00 (00) 00000-0000"
         labelContent="Telefone"
-        // mask={[
-        //   '+',
-        //   /[1-9]/,
-        //   /\d/,
-        //   ' ',
-        //   '(',
-        //   /[1-9]/,
-        //   /\d/,
-        //   ')',
-        //   ' ',
-        //   /\d/,
-        //   /\d/,
-        //   /\d/,
-        //   /\d/,
-        //   /\d/,
-        //   '-',
-        //   /\d/,
-        //   /\d/,
-        //   /\d/,
-        //   /\d/,
-        // ]}
+        placeholder="+00 (00) 00000-0000"
       />
     </PersonalDataFormContainer>
   )

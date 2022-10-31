@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FieldContainer = styled.div`
+export const FieldMaskContainer = styled.div`
   width: 100%;
   max-width: 20rem;
 

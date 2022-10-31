@@ -1,38 +1,43 @@
 import { FieldContainer } from './styles'
 
-import { useFormContext } from 'react-hook-form'
-import MaskedInput from 'react-text-mask'
+import { FormControl, TextField } from '@mui/material'
+import { Controller, useFormContext } from 'react-hook-form'
 
 interface FieldProps {
   name: string
   type: string
-  placeholder: string
   labelContent: string
-  mask?: Array<string | RegExp> | false
+  placeholder: string
 }
 
-export function Field({
-  name,
-  type,
-  placeholder,
-  labelContent,
-  mask,
-}: FieldProps) {
-  const { register } = useFormContext()
-
-  const regexMask = !mask ? false : mask
+export function Field({ name, type, labelContent, placeholder }: FieldProps) {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext()
 
   return (
     <FieldContainer>
-      <label htmlFor={name}>{labelContent}</label>
-      <MaskedInput
-        mask={regexMask}
-        {...register(name)}
-        id={name}
-        type={type}
-        placeholder={placeholder}
-        required
-      />
+      <FormControl fullWidth>
+        <Controller
+          name={name}
+          control={control}
+          render={(props) => (
+            <TextField
+              variant="filled"
+              type={type}
+              label={labelContent}
+              placeholder={placeholder}
+              value={props.field.value}
+              onChange={props.field.onChange}
+              error={!!errors[name]?.message}
+              helperText={
+                errors[name]?.message ? `${errors[name]?.message}` : ''
+              }
+            />
+          )}
+        />
+      </FormControl>
     </FieldContainer>
   )
 }

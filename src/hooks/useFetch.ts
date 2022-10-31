@@ -8,14 +8,15 @@ export function useFetch(urlCountry: string, urlCity: string) {
     const response = await fetch(urlCountry)
     const data = await response.json()
 
-    setCountry(data.name)
+    setCountry(data)
+    console.log(data)
   }
 
   async function loadFetchCity() {
     const response = await fetch(urlCity)
     const data = await response.json()
 
-    setCity(data.name_ptbr)
+    setCity(data)
   }
 
   useEffect(() => {

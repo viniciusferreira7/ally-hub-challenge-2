@@ -1,9 +1,7 @@
-import * as Dialog from '@radix-ui/react-dialog'
-import { AirplaneTakeoff, X } from 'phosphor-react'
+import { AirplaneTakeoff } from 'phosphor-react'
 import { useFetch } from '../../../../hooks/useFetch'
 
-import { CloseButton } from '../../styles'
-import { Field } from '../Field'
+import { FieldLocations } from '../FieldLocations'
 import { InterestDestinationsFormContainer } from './styles'
 
 export function InterestDestinationsForm() {
@@ -12,24 +10,26 @@ export function InterestDestinationsForm() {
     'https://amazon-api.sellead.com/city',
   )
 
-  console.log(country)
-
   return (
     <InterestDestinationsFormContainer>
-      <CloseButton>
-        <X size={25} />
-      </CloseButton>
-      <Dialog.Title>
+      <h2>
         Destino de interesse
         <AirplaneTakeoff size={35} weight="fill" />
-      </Dialog.Title>
-      <Field
+      </h2>
+      <FieldLocations
         name="country"
-        type="text"
-        placeholder="País"
         labelContent="País"
+        type="text"
+        placeholder="Brasil"
+        listLocations={country}
       />
-      <Field name="city" type="text" placeholder="City" labelContent="City" />
+      <FieldLocations
+        name="city"
+        labelContent="Cidade"
+        type="text"
+        placeholder="São Paulo"
+        listLocations={city}
+      />
     </InterestDestinationsFormContainer>
   )
 }

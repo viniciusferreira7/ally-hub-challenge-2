@@ -27,7 +27,7 @@ export const GalleryContainer = styled.section`
   div {
     max-width: 15rem;
     width: 100%;
-    height: 15rem;
+    height: 12rem;
 
     overflow: hidden;
     box-shadow: none;

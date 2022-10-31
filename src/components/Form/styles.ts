@@ -1,17 +1,6 @@
 import styled from 'styled-components'
 
-import * as Dialog from '@radix-ui/react-dialog'
 import { BaseButton } from '../../pages/Home/styles'
-
-export const Overlay = styled(Dialog.Overlay)`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-
-  background: ${(props) => props.theme['blue-500']};
-  opacity: 0.5;
-`
 
 export const FormContainer = styled.form`
   display: grid;
@@ -24,10 +13,6 @@ export const FormContainer = styled.form`
   width: 100%;
   max-width: 1120px;
   margin: auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
   @media screen and (max-width: 768px) {
     grid-template-areas:
@@ -39,30 +24,6 @@ export const FormContainer = styled.form`
 `
 export const ButtonContainer = styled(BaseButton)`
   grid-area: SendButton;
-`
-
-export const CloseButton = styled(Dialog.Close)`
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 0.8rem;
-
-  background: transparent;
-  border: 0;
-  outline: 0;
-  line-height: 0;
-  cursor: pointer;
-
-  border-radius: 8px;
-
-  color: ${(props) => props.theme['blue-500']};
-
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    background: ${(props) => props.theme['blue-500']};
-    color: ${(props) => props.theme.white};
-  }
 `
 
 export const BaseFormCardContainer = styled.div`

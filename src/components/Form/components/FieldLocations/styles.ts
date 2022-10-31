@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
-export const FieldContainer = styled.div`
+export const FieldLocationsContainer = styled.div`
   width: 100%;
   max-width: 20rem;
+  z-index: 999999;
+  position: relative;
 
   input {
     &:focus {
